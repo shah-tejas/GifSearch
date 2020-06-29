@@ -2,16 +2,27 @@ import React from 'react'
 import {useImage} from 'react-image'
 import './Hit.css';
 import Loader from 'react-loader-spinner';
+import Clipboard from 'react-clipboard.js';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const Image = ({ src, alt }) => {
     return (
-        <img src={src} alt={alt} />
+        <div>
+            <Clipboard data-clipboard-text={src} className="gifButton">
+                <img src={src} alt={alt} />
+                <div className="overLay">
+                    <AssignmentIcon fontSize="large" />
+                </div>
+            </Clipboard>
+        </div>
+        
     )
 }
 
 const Hit = ({ title, link }) => {
+    const formattedLink = link.substring(link.indexOf('https://media.giphy.com'));
     const {src, isLoading} = useImage({
-        srcList: link,
+        srcList: formattedLink,
         useSuspense: false
     });
     return (
