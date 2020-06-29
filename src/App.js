@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <div className="title">Search GIFs</div>
+      <p>(Click on the gif to copy the url)</p>
       <InstantSearch searchClient={searchClient} indexName="giphy">
         <CustomSearchBox autoFocus searchAsYouType={false} />
         <Hits />
