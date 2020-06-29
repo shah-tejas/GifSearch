@@ -1,6 +1,13 @@
 import React from 'react'
 import {useImage} from 'react-image'
 import './Hit.css';
+import Loader from 'react-loader-spinner';
+
+const Image = ({ src, alt }) => {
+    return (
+        <img src={src} alt={alt} />
+    )
+}
 
 const Hit = ({ title, link }) => {
     const {src, isLoading} = useImage({
@@ -11,8 +18,13 @@ const Hit = ({ title, link }) => {
         <div className="hitContainer">
             {
                 isLoading ?
-                    "Loading..." :
-                    <img src={src} alt={title} />
+                <Loader
+                    type="TailSpin"
+                    color="#00BFFF"
+                    height={80}
+                    width={80}
+                /> :
+                <Image src={src} alt={title} />
             }
         </div>
     );
