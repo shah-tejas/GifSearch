@@ -1,4 +1,8 @@
 .hitsContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
 }

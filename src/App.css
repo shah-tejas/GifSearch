@@ -1,3 +1,11 @@
 .App {
   text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 50px;
 }
