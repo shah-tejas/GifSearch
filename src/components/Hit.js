@@ -1,10 +1,19 @@
-import React from 'react';
+import React from 'react'
+import {useImage} from 'react-image'
 import './Hit.css';
 
 const Hit = ({ title, link }) => {
+    const {src, isLoading} = useImage({
+        srcList: link,
+        useSuspense: false
+    });
     return (
         <div className="hitContainer">
-            <img src={link} alt={title} />
+            {
+                isLoading ?
+                    "Loading..." :
+                    <img src={src} alt={title} />
+            }
         </div>
     );
 }
