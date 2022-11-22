@@ -16,7 +16,7 @@
     "react-image": "^4.0.2",
     "react-instantsearch-dom": "^6.6.0",
     "react-loader-spinner": "^3.1.14",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
